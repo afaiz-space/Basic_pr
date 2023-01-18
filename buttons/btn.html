@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            padding: 24px;
+        }
+        .btn{
+            padding: 8px 16px;
+        }
+        
+        
+        .rd-btn{
+            border-radius: 30px;
+            border: none;
+        }
+        .fill-btn{
+            background-color: hsl(240, 100%, 67%);
+            border: transparent;
+            color: hsl(0, 24%, 96%);
+        }
+        .out-btn{
+            background-color: transparent;
+            border: 2px solid hsl(240, 100%, 67%);
+            color: hsl(240, 100%, 67%);
+        }
+        .txt-btn{
+            background: transparent;
+            border: none;
+
+        }
+        .hov:hover{
+            background-color: hsla(240, 100%, 67%, 0.856);
+        }
+        .act:active{
+            background-color: hsla(240, 48%, 9%, 0.856);
+        }
+        .foc:focus{
+            background-color: hsla(240, 48%, 9%, 0.856);
+        }
+    </style>
+</head>
+<body>
+    <!-- default button -->
+    <button class="btn">Primary</button>
+    
+    <!-- radius button -->
+    <button class="btn rd-btn">Primary</button>
+    
+    <!-- fill button -->
+    <button class="btn fill-btn">Primary</button>
+    
+    <!-- outline button -->
+    <button class="btn out-btn">Primary</button>
+
+    <!-- text button -->
+    <button class="btn txt-btn">Primary</button>
+
+    <!-- hover button -->
+    <button class="btn fill-btn hov">Primary</button>
+    
+    <!-- active button -->
+    <button class="btn fill-btn hov act">Primary</button>
+    
+    <!-- focus  button -->
+    <button class="btn fill-btn foc">Primary</button>
+    
+   
+    
+    
+</body>
+</html>

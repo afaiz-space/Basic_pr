@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shapes</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* border: 2px solid red; */
+      }
+      body {
+        display: grid;
+        place-items: center;
+        gap: 50px;
+        min-height: 100vh;
+        padding: 10px 0;
+      }
+      .rect {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: none;
+      }
+      .circle-1 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: none;
+        border-radius: 50%;
+      }
+      .ellipse {
+        width: 150px;
+        height: 100px;
+        background-color: aqua;
+        border: none;
+        border-radius: 50%;
+      }
+      .brust-8 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: none;
+
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+      }
+      .brust-8::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: none;
+        transform: rotate(45deg);
+      }
+      .brust-12 {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: none;
+        position: relative;
+        border-radius: 5px;
+      }
+      .brust-12::before,
+      .brust-12::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border: none;
+        transform: rotate(30deg);
+        border-radius: 5px;
+      }
+      .brust-12::before {
+        transform: rotate(30deg);
+      }
+
+      .brust-12::after {
+        transform: rotate(60deg);
+      }
+      .trapezoid {
+        border-top: 50px solid red;
+        border-left: 50px solid blue;
+        border-right: 50px solid yellow;
+        border-bottom: 50px solid green;
+      }
+      .trangle-top {
+        border-top: 50px solid red;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+      }
+      .trangle-bottom {
+        border-top: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 50px solid green;
+      }
+      .trangle-left {
+        border-top: 50px solid transparent;
+        border-left: 50px solid blue;
+        border-right: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+      }
+      .trangle-right {
+        border-top: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid yellow;
+        border-bottom: 50px solid transparent;
+      }
+      .trangle-top__left {
+        border-top: 50px solid red;
+        border-left: 50px solid blue;
+        border-right: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+      }
+      .trangle-top__right {
+        border-top: 50px solid red;
+        border-left: 50px solid transparent;
+        border-right: 50px solid yellow;
+        border-bottom: 50px solid transparent;
+      }
+      .trangle-bottom__right {
+        border-top: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid yellow;
+        border-bottom: 50px solid green;
+      }
+      .trangle-bottom__left {
+        border-top: 50px solid transparent;
+        border-left: 50px solid blue;
+        border-right: 50px solid transparent;
+        border-bottom: 50px solid green;
+      }
+
+      .circle {
+        border-top: 50px solid red;
+        border-left: 50px solid blue;
+        border-right: 50px solid yellow;
+        border-bottom: 50px solid green;
+        border-radius: 50%;
+      }
+      .circle-top {
+        border-top: 50px solid red;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-radius: 50%;
+        border-bottom: 50px solid transparent;
+      }
+      .circle-bottom {
+        border-top: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-radius: 50%;
+        border-bottom: 50px solid green;
+      }
+      .circle-left {
+        border-top: 50px solid transparent;
+        border-left: 50px solid blue;
+        border-right: 50px solid transparent;
+        border-radius: 50%;
+        border-bottom: 50px solid transparent;
+      }
+      .circle-right {
+        border-top: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid yellow;
+        border-radius: 50%;
+        border-bottom: 50px solid transparent;
+      }
+      .circle-top__left {
+        border-top: 50px solid red;
+        border-left: 50px solid blue;
+        border-right: 50px solid transparent;
+        border-radius: 50%;
+        border-bottom: 50px solid transparent;
+      }
+      .circle-top__right {
+        border-top: 50px solid red;
+        border-left: 50px solid transparent;
+        border-right: 50px solid yellow;
+        border-radius: 50%;
+        border-bottom: 50px solid transparent;
+      }
+      .circle-bottom__right {
+        border-top: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid yellow;
+        border-radius: 50%;
+        border-bottom: 50px solid green;
+      }
+      .circle-bottom__left {
+        border-top: 50px solid transparent;
+        border-left: 50px solid blue;
+        border-right: 50px solid transparent;
+        border-radius: 50%;
+        border-bottom: 50px solid green;
+      }
+      .quartz {
+        border-top: 50px solid red;
+        border-left: 50px solid blue;
+        border-right: 50px solid yellow;
+        border-bottom: 50px solid green;
+        border-radius: 90%;
+      }
+      .quartz-top {
+        border-top: 50px solid red;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-radius: 90%;
+        border-bottom: 50px solid transparent;
+      }
+      .quartz-bottom {
+        border-top: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-radius: 90%;
+        border-bottom: 50px solid green;
+      }
+      .quartz-left {
+        border-top: 50px solid transparent;
+        border-left: 50px solid blue;
+        border-right: 50px solid transparent;
+        border-radius: 90%;
+        border-bottom: 50px solid transparent;
+      }
+      .quartz-right {
+        border-top: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid yellow;
+        border-radius: 90%;
+        border-bottom: 50px solid transparent;
+      }
+      .quartz-top__left {
+        border-top: 50px solid red;
+        border-left: 50px solid blue;
+        border-right: 50px solid transparent;
+        border-radius: 90%;
+        border-bottom: 50px solid transparent;
+      }
+      .quartz-top__right {
+        border-top: 50px solid red;
+        border-left: 50px solid transparent;
+        border-right: 50px solid yellow;
+        border-radius: 90%;
+        border-bottom: 50px solid transparent;
+      }
+      .quartz-bottom__right {
+        border-top: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-right: 50px solid yellow;
+        border-radius: 90%;
+        border-bottom: 50px solid green;
+      }
+      .quartz-bottom__left {
+        border-top: 50px solid transparent;
+        border-left: 50px solid blue;
+        border-right: 50px solid transparent;
+        border-radius: 90%;
+        border-bottom: 50px solid green;
+      }
+      .cube {
+        width: 100px;
+        height: 100px;
+        background-color: #293636;
+        position: relative;
+      }
+      .cube::before {
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 30px;
+        background: #5e7e7e;
+        top: -30%;
+        left: 15%;
+        transform: skewX(315deg);
+      }
+      .cube::after {
+        position: absolute;
+        content: "";
+        width: 30px;
+        height: 100px;
+        background: #255050;
+        top: -15%;
+        right: -30%;
+        transform: skewY(315deg);
+      }
+      .pyramid {
+        width: 100px;
+        height: 200px;
+        position: relative;
+      }
+      .pyramid::before,
+      .pyramid::after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border: 50px solid;
+        position: absolute;
+      }
+      .pyramid::before {
+        border-color: transparent transparent #ff5656 transparent;
+        transform: scaleY(2) skewY(-40deg) rotate(45deg);
+      }
+      .pyramid::after {
+        border-color: transparent transparent #d64444 transparent;
+        transform: scaleY(2) skewY(40deg) rotate(-45deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="rect"></div>
+    <div class="circle-1"></div>
+    <div class="ellipse"></div>
+    <div class="brust-8"></div>
+    <div class="brust-12"></div>
+
+    <div class="trapezoid"></div>
+
+    <div class="trangle-top"></div>
+    <div class="trangle-bottom"></div>
+    <div class="trangle-left"></div>
+    <div class="trangle-right"></div>
+
+    <div class="trangle-top__left"></div>
+    <div class="trangle-top__right"></div>
+    <div class="trangle-bottom__right"></div>
+    <div class="trangle-bottom__left"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle-top"></div>
+    <div class="circle-bottom"></div>
+    <div class="circle-left"></div>
+    <div class="circle-right"></div>
+
+    <div class="circle-top__left"></div>
+    <div class="circle-top__right"></div>
+    <div class="circle-bottom__right"></div>
+    <div class="circle-bottom__left"></div>
+
+    <div class="quartz"></div>
+
+    <div class="quartz-top"></div>
+    <div class="quartz-bottom"></div>
+    <div class="quartz-left"></div>
+    <div class="quartz-right"></div>
+
+    <div class="quartz-top__left"></div>
+    <div class="quartz-top__right"></div>
+    <div class="quartz-bottom__right"></div>
+    <div class="quartz-bottom__left"></div>
+    <div class="cube"></div>
+    <div class="pyramid"></div>
+  </body>
+</html>

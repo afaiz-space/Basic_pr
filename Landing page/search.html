@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* border: 2px solid red; */
+      }
+      body {
+        
+
+        min-height: 100vh;
+      }
+      .linkstab {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-right: 20px;
+    padding: 12px;
+}
+
+      .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+min-height: 70vh;
+        
+       
+      }
+      .title{
+        transform: translateY(-30px);
+          font-size: 48px;
+          font-weight: 500;
+      }
+      .inputwraper {
+        width: 30rem;
+        height: 2.5rem;
+
+        padding: 0 12px;
+
+        border-radius: 30px;
+        border: 1px solid black;
+        overflow: hidden;
+
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        box-shadow: 0px 2px 4px rgba(128, 128, 128, 0.589);
+      }
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding: 0 12px;
+      }
+    </style>
+      <script src="https://kit.fontawesome.com/09e326ae53.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navwrap">
+      <div class="linkstab">
+        <a href="#">Gmail</a>
+        <a href="#">Images</a>
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+      </div>
+    </nav>
+    <section class="container">
+      
+        <div class="title">
+            <h1>Google</h1>
+        </div>
+        <div class="inputwraper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search your content" />
+          <i class="fa-solid fa-microphone"></i>
+        </div>
+    </section>
+  </body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapse trail</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    display: flex;
+    flex-direction: row;
+    background: whitesmoke;
+min-height: 100vh;
+
+}
+header{
+    position: sticky;
+    top: 0;
+    background: #ededed;
+    width: 210px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    transition: all cubic-bezier(0.85, 0.58, 0.76, 0.77) .5s;
+    padding: 10px 0 10px 10px;
+    border-right: 1px solid rgb(190, 190, 190);
+    
+
+}
+.head_logo{
+    margin: 4rem 0;
+}
+.name_2{
+    display: none;
+}
+.nav_container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: space-between;
+}
+
+.logo_container{
+    width: 100%;
+    height:20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.logo_title_wrap{
+ width: 100%;
+ height: 3rem;
+ border-radius: 30px 0 0 30px;
+ 
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition:  .5s;
+ cursor: pointer;
+}
+
+.logo_title{
+
+    width: 6rem;
+    display: flex;
+    place-items: center;
+    justify-content: flex-start;
+    gap:1rem;
+   
+}
+.nav_logo{
+    width:24px;
+    transition:cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+}
+.nav_logo:hover{
+    transform: scale(1.1);
+}
+.left_arrow{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile_container{
+    margin-bottom: 3rem;
+}
+.profile_img{
+    width: 42px;
+    border-radius: 50%;
+    border: 2px solid #3f3f3f;
+}
+
+.active, .logo_title_wrap:hover{
+    background-color: #adadad;
+    border-radius: 30px 0 0 30px;
+    border-right: 2px solid black;
+}
+.arrow_rotate{
+    transform: rotate(-180deg);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+}
+.content_section{
+    
+    width: 100%;
+}
+.tab_content{
+    place-items: center;
+    justify-content: center;
+}
+@media screen and (max-width:1024px) {
+    header{
+        width: 100px;
+        padding: 0;
+    }
+    .name_1{
+        display: none;
+    }
+    .name_2{
+        display: block;
+    }
+    .logo_title, .left_arrow{
+        justify-content: center;
+
+    }
+    .logo_title_wrap{
+        border-radius:0 ;
+    }
+    .title{
+        display: none;
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head_logo">
+          <h2 class="name_1">Faizan</h2>
+          <h2 class="name_2">F</h2>
+        </div>
+        <nav class="nav_container">
+          <div class="logo_container tab">
+            <div
+              class="logo_title_wrap tablinks"
+              onclick="openTab(event, 'homePage')"
+              id="defaultOpen"
+            >
+              <div class="logo_title">
+                <img
+                  class="nav_logo"
+                  src="./Social logo/profile.svg"
+                  alt="About"
+                />
+                <p class="title">About</p>
+              </div>
+            </div>
+  
+            <div
+              class="logo_title_wrap tablinks"
+              onclick="openTab(event, 'skill')"
+            >
+              <div class="logo_title">
+                <img
+                  class="nav_logo"
+                  src="./Social logo/skills.svg"
+                  alt="Skills"
+                />
+                <p class="title">Skills</p>
+              </div>
+            </div>
+  
+            <div
+              class="logo_title_wrap tablinks"
+              onclick="openTab(event, 'project')"
+            >
+              <div class="logo_title">
+                <img
+                  class="nav_logo"
+                  src="./Social logo/project.svg"
+                  alt="Project"
+                />
+                <p class="title">Project</p>
+              </div>
+            </div>
+  
+            <div
+              class="logo_title_wrap tablinks"
+              onclick="openTab(event, 'resume')"
+            >
+              <div class="logo_title">
+                <img
+                  class="nav_logo"
+                  src="./Social logo/resume.svg"
+                  alt="Resume"
+                />
+                <p class="title">Resume</p>
+              </div>
+            </div>
+  
+            <div
+              class="logo_title_wrap tablinks"
+              onclick="openTab(event, 'contact')"
+            >
+              <div class="logo_title">
+                <img
+                  class="nav_logo"
+                  src="./Social logo/contact.svg"
+                  alt="Contact"
+                />
+                <p class="title">Contact</p>
+              </div>
+            </div>
+  
+            <div
+              class="logo_title_wrap tablinks"
+              onclick="openTab(event, 'social')"
+            >
+              <div class="logo_title">
+                <img
+                  class="nav_logo"
+                  src="./Social logo/social.svg"
+                  alt="Socail"
+                />
+                <p class="title">Social</p>
+              </div>
+            </div>
+          </div>
+  
+          
+  
+          <div class="logo_title_wrap profile_container">
+            <div class="logo_title">
+              <img
+                class="nav_logo profile_img"
+                src="./Social logo/IMG_20190612_134705 copy.jpg"
+                alt="profile_img"
+              />
+              <p class="title">Profile</p>
+            </div>
+          </div>
+        </nav>
+      </header>
+</body>
+</html>

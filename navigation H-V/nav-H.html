@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Nav</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            border: 2px solid red;
+        }
+        body{
+            min-height: 100vh;
+        }
+        .navigation{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 16px 24px;
+            
+            background-color:aliceblue;
+        }
+        .nav-links{
+            display: flex;
+            gap: 0;
+        }
+        a{
+            text-decoration: none;
+           
+            background-color: transparent;
+           
+            color: hsl(0, 2%, 8%);
+            padding: 8px 16px;
+        }
+        a:hover{
+            background-color: rgb(250, 213, 165);
+        }
+        a:active{
+            background-color: rgb(88, 88, 88);
+        }
+        a:focus{
+            background-color: rgb(250, 213, 165);
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <div><h2>Horizontal</h2></div>
+        <div class="nav-links">
+            <a href="#">Home</a >
+            <a href="#">About</a >
+            <a href="#">Service</a >
+            <a href="#">Gallery</a >
+            <a href="#">Contact Us</a >
+        </div>
+    </nav>
+   
+    
+    
+</body>
+</html>
