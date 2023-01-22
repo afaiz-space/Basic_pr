@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 24px;
+  column-count: 3;
+}
+.btn {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.rd-btn {
+  border-radius: 30px;
+  border: none;
+}
+.fill-btn {
+  background-color: hsl(240, 100%, 67%);
+  border: transparent;
+  color: hsl(0, 24%, 96%);
+}
+.out-btn {
+  background-color: transparent;
+  border: 2px solid hsl(240, 100%, 67%);
+  color: hsl(240, 100%, 67%);
+}
+.txt-btn {
+  background: transparent;
+  border: none;
+}
+.hov:hover {
+  background-color: hsla(240, 100%, 67%, 0.856);
+}
+.act:active {
+  background-color: hsla(240, 48%, 9%, 0.856);
+}
+.foc:focus {
+  background-color: hsla(240, 48%, 9%, 0.856);
+}
+.morph-btn {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+  outline: transparent;
+  padding: 12px;
+  background: #cbe6ff;
+  box-shadow: 4px 4px 8px #7fb1d9, -4px -4px 8px #fcfcff;
+}
+.round-50 {
+  border-radius: 50%;
+}
+.round-16 {
+  border-radius: 16px;
+}
+.btn-wrap {
+  width: 68px;
+  height: 68px;
+  box-shadow: 4px 4px 4px #7fb1d9, -4px -4px 8px #fcfcff,
+    inset -4px -4px 8px #fcfcff, inset 4px 4px 8px #7fb1d9;
+}
+.btn-wrap .btn-inside {
+  margin-bottom: 0;
+}
+.btn-inside {
+  box-shadow: 4px 4px 4px #7fb1d9, -4px -4px 8px #fcfcff,
+    inset -4px -4px 8px #fcfcff, inset 4px 4px 8px #7fb1d9;
+}
+
+.btn-wrap-1 {
+  width: 68px;
+  height: 68px;
+  box-shadow: 4px 4px 8px #7fb1d9, -4px -4px 8px #fcfcff;
+}
+.btn-wrap-1 .btn-inside-1 {
+  margin-bottom: 0;
+}
+.btn-inside-1 {
+  box-shadow: 4px 4px 8px #7fb1d9, -4px -4px 8px #fcfcff;
+}
+
+.btn-wrap-2 {
+  width: 68px;
+  height: 68px;
+  box-shadow: 4px 4px 4px #7fb1d9, -4px -4px 8px #fcfcff,
+    inset -4px -4px 8px #fcfcff, inset 4px 4px 8px #7fb1d9;
+}
+.btn-wrap-2 .btn-inside-2 {
+  margin-bottom: 0;
+}
+.btn-inside-2 {
+  box-shadow: inset 4px 4px 4px rgba(252, 252, 255, 0.25),
+    inset -4px -4px 8px rgba(127, 177, 217, 0.25);
+}
+.btn-wrap-3 {
+  width: 68px;
+  height: 68px;
+  box-shadow: 4px 4px 8px #7fb1d9, -4px -4px 8px #fcfcff;
+}
+.btn-wrap-3 .btn-inside-3 {
+  margin-bottom: 0;
+}
+.btn-inside-3 {
+  box-shadow: inset 4px 4px 4px rgba(252, 252, 255, 0.25),
+    inset -4px -4px 8px rgba(127, 177, 217, 0.25);
+}
+
+.btn-wrap:hover  .btn-inside {
+    box-shadow: inset 4px 4px 4px rgb(252 252 255 / 25%), inset -4px -4px 8px rgb(127 177 217 / 25%);
+}
+.btn-wrap-1:hover .btn-inside-1 {
+    box-shadow: inset 4px 4px 4px rgb(252 252 255 / 25%), inset -4px -4px 8px rgb(127 177 217 / 25%);
+}
+.btn-wrap-2:hover .btn-inside-2{
+    box-shadow: 4px 4px 4px #7fb1d9, -4px -4px 8px #fcfcff, inset -4px -4px 8px #fcfcff, inset 4px 4px 8px #7fb1d9;
+}
+.btn-wrap-3:hover .btn-inside-3 {
+    box-shadow: 4px 4px 8px #7fb1d9, -4px -4px 8px #fcfcff;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover and animation btn-2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing:border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            min-height: 100vh;
+        }
+        
+        .button ,.btn-inside{
+            cursor:pointer;
+        }
+        .button{
+            width: 10rem;
+            height: 3rem;
+            background: rgb(67, 67, 233);
+            color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-inside{
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgb(104, 104, 255);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    z-index: 1;
+   
+        }
+        .button:hover .btn-inside{
+           
+            animation: move-right 1s linear;
+        }
+        span{
+            z-index: 2;
+            transform: translateX(0px);
+            cursor: pointer;
+        }
+@keyframes move-right{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- <div class="hvr_effect"></div> -->
+    <div class="button">
+        <div class="btn-inside">
+           
+            
+        </div>
+        <span>Contact Us</span>
+    </div>
+</body>
+</html>
